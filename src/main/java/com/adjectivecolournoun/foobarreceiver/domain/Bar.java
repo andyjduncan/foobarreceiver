@@ -9,15 +9,14 @@ public class Bar extends Thing {
 
     private final String bazId;
 
-    private Bar(Integer id, String barId, String bazId) {
+    public Bar(Integer id, String barId, String bazId) {
         super(id);
         this.barId = barId;
         this.bazId = bazId;
     }
 
-    static Bar makeBar(String thing) {
+    static Thing makeBar(String thing) {
         String regex = "bar:(\\d{4}):(\\p{XDigit}{3}):(\\p{XDigit}{3})";
-
         Matcher matcher = makeMatcher(thing, regex);
 
         Integer thingId = Integer.valueOf(matcher.group(1));

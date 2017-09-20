@@ -1,10 +1,13 @@
-# Foo Bar service
+# Thing service
 
-Create a service to receive foos and bars over the network.  Foos and
-bars will be posted to this service and should be stored for later
-retrieval.
+Create a service to receive Things over the network.  Things come in two
+varieties: Foos and Bars.  Both Foos and Bars will be posted to this
+service and should be stored for later retrieval.
 
-## Formats
+## Thing formats
+
+All Things have an id.  Different varieties of Thing have their own
+specific ids.
 
 ### Foo format
 

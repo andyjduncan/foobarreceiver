@@ -7,14 +7,13 @@ public class Foo extends Thing {
 
     private final String fooId;
 
-    private Foo(Integer id, String fooId) {
+    public Foo(Integer id, String fooId) {
         super(id);
         this.fooId = fooId;
     }
 
-    static Foo makeFoo(String thing) {
+    static Thing makeFoo(String thing) {
         String regex = "foo:(\\d{4}):(\\p{XDigit}{4})";
-
         Matcher matcher = makeMatcher(thing, regex);
 
         Integer thingId = Integer.valueOf(matcher.group(1));
@@ -39,7 +38,7 @@ public class Foo extends Thing {
     }
 
     @Override
-    public String toString() {
+public String toString() {
         return "Foo{" +
                 "id=" + id +
                 ", fooId='" + fooId + '\'' +
